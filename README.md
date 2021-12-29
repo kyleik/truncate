@@ -1,5 +1,5 @@
 # Truncate
-A simple web app that helps you turn your long links into shorter links.
+A simple web app that helps you convert your long links into shorter links.
 
 ## Features
 
