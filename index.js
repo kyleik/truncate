@@ -2,12 +2,12 @@ const fs = require('fs');
 const express = require('express');
 const cheerio = require('cheerio');
 
-const db = require("./db");
-
 const port = process.argv[3] || process.env.PORT || 8080;
 const hostname = process.argv[2] || process.env.HOST;
 const DOMAIN_NAME = process.env.DOMAIN_NAME;
 const app = express();
+
+const db = require("./db");
 
 String.prototype.isalnum = function() {
     var regExp = /^[A-Za-z0-9]+$/;
@@ -29,10 +29,12 @@ async function stringIsAValidUrl(str) {
 }
 
 app.use('/static', express.static('assets/static'));
+
 app.use(async (req, res, next) => {
     console.log(`${req.method} ${req.path}`);
     next();
 });
+
 app.use(express.json());
 
 var cheerio_load = cheerio.load(fs.readFileSync("./assets/index.html"));
