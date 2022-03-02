@@ -10,5 +10,5 @@ Users can paste their link, then add their own subdirectory to a new URL on the 
 
 
 ## Technologies Used
-- HTML
 - Javascript
+- HTML
