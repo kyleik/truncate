@@ -12,3 +12,4 @@ Users can paste their link, then add their own subdirectory to a new URL on the 
 ## Technologies Used
 - Javascript
 - HTML
+-CSS (Sass)
